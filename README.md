@@ -16,7 +16,7 @@ This project is a web application that utilizes Natural Language Processing (NLP
 ## Technologies Used
 
 - **Python**: The primary programming language for the application.
-- **Streamlit**: Framework for building the web application interface.
+- **Gradio**: Framework for building the web application interface.
 - **scikit-learn**: Library for machine learning, used for training the language detection model.
 - **NLTK**: Natural Language Toolkit for text preprocessing.
 - **googletrans**: Library for accessing the Google Translate API for translation services.
