@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project is a web application that utilizes Natural Language Processing (NLP) techniques to detect the language of input text and translate it into a target language. Built using Python and the Streamlit framework, the application provides a user-friendly interface for seamless interaction.
+This project is a web application that utilizes Natural Language Processing (NLP) techniques to detect the language of input text and translate it into a target language. Built using Python and the Gradio framework, the application provides a user-friendly interface for seamless interaction.
 
 ## Features
 
