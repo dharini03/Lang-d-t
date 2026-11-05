@@ -1,23 +1,49 @@
-# Lang-d-t
+# Lang-d-t: Language Detection and Translation
 
-# Language Detection and Translation Web Application
+A Gradio web app that detects the language of any text you enter and translates it into a language you choose.
 
-## Overview
+**Stack:** Python · Gradio · scikit-learn · NLTK · pandas · googletrans
 
-This project is a web application that utilizes Natural Language Processing (NLP) techniques to detect the language of input text and translate it into a target language. Built using Python and the Gradio framework, the application provides a user-friendly interface for seamless interaction.
+## Problem
+
+When you come across text in a language you can't identify, you have to guess the language before you can translate it. This app does both steps for you: it identifies the language first, then translates.
 
 ## Features
 
-- **Language Detection**: Automatically identifies the language of the input text using a trained machine learning model.
-- **Real-time Translation**: Translates detected text into a user-selected target language using the Google Translate API.
-- **User-Friendly Interface**: Developed with Streamlit, providing an intuitive and interactive experience for users.
-- **Support for Multiple Languages**: Supports a wide range of languages for both detection and translation.
+- **Language detection:** identifies the language of the input text using a machine learning model trained with scikit-learn
+- **Translation:** translates the text into a target language of your choice
+- **Simple interface:** built with Gradio, so it runs in the browser
+- **Multiple languages:** supports a wide range of languages for detection and translation
 
-## Technologies Used
+## How it works
 
-- **Python**: The primary programming language for the application.
-- **Gradio**: Framework for building the web application interface.
-- **scikit-learn**: Library for machine learning, used for training the language detection model.
-- **NLTK**: Natural Language Toolkit for text preprocessing.
-- **googletrans**: Library for accessing the Google Translate API for translation services.
-- **pandas**: Library for data manipulation and analysis.
+1. The input text is cleaned and preprocessed with NLTK.
+2. The trained scikit-learn model predicts the language of the text.
+3. The text is translated into the selected target language using the `googletrans` library.
+4. The detected language and the translation are shown in the interface.
+
+## Tech stack
+
+| Purpose | Technology |
+|---|---|
+| Language | Python |
+| Web interface | Gradio |
+| Language detection model | scikit-learn |
+| Text preprocessing | NLTK |
+| Data handling | pandas |
+| Translation | googletrans |
+
+## Limitations
+
+- Very short or mixed-language text is harder to detect correctly.
+- `googletrans` is an unofficial wrapper around Google Translate, so it can break or be rate-limited without notice.
+
+## Next steps
+
+- Show a confidence score with each detection
+- Switch to an official translation API for reliability
+- Handle mixed-language input
+
+## Author
+
+Dharini M ([@dharini03](https://github.com/dharini03))
